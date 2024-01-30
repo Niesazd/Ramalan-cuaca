@@ -17,4 +17,32 @@ body {
 }
 .weather-app{
     background-color: #87CEEB;
+    padding: 30px;
+    border-radius: 40px;
+}
+
+.input-search {
+    display: flex;
+    justify-content: end;
+}
+ .search-city {
+     padding: 12px;
+     border-radius: 50px 0px 0px 50px;
+     border: none;
+     font-size: 16px;
+     
+    }
+    
+.search-city-button {
+    border-radius: 0px 50px 50px 0px;
+    padding: 12px;
+    border: none
+}
+
+.city-country-time {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
 }
