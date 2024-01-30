@@ -64,6 +64,10 @@ h2 {
 .current-temperature-emoji {
     font-size: 80px;
 }
+.current-temperature-data {
+    font-size: 40px;
+    font-weight: 600;
+}
 
 footer {
     border-top: 1px solid #33333346;
