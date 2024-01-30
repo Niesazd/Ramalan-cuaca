@@ -2,6 +2,7 @@
 
 * {
   font-family: "Raleway", sans-serif;
+  font-size: 16px;
   color: #333333;
   margin: 0;
   padding: 0;
@@ -29,7 +30,7 @@ body {
      padding: 12px;
      border-radius: 50px 0px 0px 50px;
      border: none;
-     font-size: 16px;
+     font-size: 12px;
      
     }
     
@@ -40,6 +41,7 @@ body {
 }
 
 .container {
+    line-height: 1.5;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -48,4 +50,23 @@ body {
 }
 .humidity-wind-container {
     display: flex;
+    justify-content: space-evenly;
+    background-color: #F5F5F5;
+    padding: 20px;
+}
+h1 {
+    font-size: 40px;
+}
+h2 {
+    font-size: 20px;
+}
+
+.current-temperature-emoji {
+    font-size: 80px;
+}
+
+footer {
+    border-top: 1px solid #33333346;
+    margin-top: 20px;
+    padding-top: 20px
 }
