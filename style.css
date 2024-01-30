@@ -9,68 +9,68 @@
 }
 
 body {
-    background-color: #F5F5F5;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #f5f5f5;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.weather-app{
-    background-color: #87CEEB;
-    padding: 30px;
-    border-radius: 40px;
+.weather-app {
+  background-color: #87ceeb;
+  padding: 30px;
+  border-radius: 40px;
 }
 
 .input-search {
-    display: flex;
-    justify-content: end;
+  display: flex;
+  justify-content: end;
 }
- .search-city {
-     padding: 12px;
-     border-radius: 50px 0px 0px 50px;
-     border: none;
-     font-size: 12px;
-     
-    }
-    
+.search-city {
+  padding: 12px;
+  border-radius: 50px 0px 0px 50px;
+  border: none;
+  font-size: 12px;
+}
+
 .search-city-button {
-    border-radius: 0px 50px 50px 0px;
-    padding: 12px;
-    border: none
+  border-radius: 0px 50px 50px 0px;
+  padding: 12px;
+  border: none;
 }
 
 .container {
-    line-height: 1.5;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-}
-.humidity-wind-container {
-    display: flex;
-    justify-content: space-evenly;
-    background-color: #F5F5F5;
-    padding: 20px;
+  line-height: 1.5;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 h1 {
-    font-size: 40px;
+  font-size: 40px;
 }
 h2 {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .current-temperature-emoji {
-    font-size: 80px;
+  font-size: 80px;
 }
 .current-temperature-data {
-    font-size: 40px;
-    font-weight: 600;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.humidity-wind-container {
+  border-radius: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #f5f5f5;
+  padding: 20px;
 }
 
 footer {
-    border-top: 1px solid #33333346;
-    margin-top: 20px;
-    padding-top: 20px
+  border-top: 1px solid #33333346;
+  margin-top: 20px;
+  padding-top: 20px;
 }
