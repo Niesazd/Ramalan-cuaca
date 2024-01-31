@@ -53,6 +53,31 @@ function searchCityFunction(response) {
   axios.get(apiUrl).then(cityTemperatureFunction);
 }
 
+function currentTimeFunction() {
+  let timeNow = new Date();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[timeNow.getDay()];
+  let hour = String(timeNow.getHours()).padStart(2, "0");
+  let minute = String(timeNow.getMinutes()).padStart(2, "0");
+
+  currentDayTime = document.querySelector(".local-time");
+  currentDayTime.innerHTML = `${day}, ${hour}:${minute} `;
+
+  // let currentTime = new Date();
+  // let options = { timeStyle: "short", hour12: true };
+  // let timeString = currentTime.toLocaleTimeString("en-US", options);
+  // console.log(timeString); // 9:41 PM
+}
+
 let searchCity = document.querySelector(".input-search");
 console.log(searchCity);
 searchCity.addEventListener("submit", searchCityFunction);
+currentTimeFunction();
