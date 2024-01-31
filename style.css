@@ -31,6 +31,7 @@ body {
   border-radius: 50px 0px 0px 50px;
   border: none;
   font-size: 12px;
+  width: 20%;
 }
 
 .search-city-button {
@@ -47,7 +48,7 @@ body {
   flex-direction: column;
 }
 h1 {
-  font-size: 40px;
+  font-size: 60px;
 }
 h2 {
   font-size: 20px;
@@ -72,5 +73,6 @@ h2 {
 footer {
   border-top: 1px solid #33333346;
   margin-top: 20px;
-  padding-top: 20px;
+  padding-top: 40px;
+  
 }
