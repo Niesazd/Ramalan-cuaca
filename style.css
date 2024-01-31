@@ -31,7 +31,6 @@ body {
   border-radius: 50px 0px 0px 50px;
   border: none;
   font-size: 12px;
-  width: 20%;
 }
 
 .search-city-button {
@@ -74,5 +73,4 @@ footer {
   border-top: 1px solid #33333346;
   margin-top: 20px;
   padding-top: 40px;
-  
 }
