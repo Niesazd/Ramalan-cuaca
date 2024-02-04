@@ -1,7 +1,7 @@
 function mainDisplay(response) {
   let city = document.querySelector(".city-data");
   let country = document.querySelector(".country-data");
-  let emoji = document.querySelector(".current-temperature-emoji");
+  let icon = document.querySelector(".temperature-icon");
   let currentTemp = document.querySelector(".current-temperature-data");
   let currentTempDesc = document.querySelector(
     ".current-temperature-description"
@@ -11,6 +11,13 @@ function mainDisplay(response) {
 
   city.innerHTML = response.data.city;
   country.innerHTML = response.data.country.toUpperCase();
+  icon.innerHTML = 
+    `<img
+      src=${response.data.condition.icon_url}
+      alt="current temperature emoji"
+      class="current-temperature-emoji"
+    />`
+  ;
   currentTemp.innerHTML = Math.round(response.data.temperature.current) + "°C";
   currentTempDesc.innerHTML = response.data.condition.description;
   humidity.innerHTML = `${response.data.temperature.humidity}%`;
@@ -27,7 +34,7 @@ axios.get(apiUrl).then(mainDisplay);
 function cityTemperatureFunction(response) {
   let city = document.querySelector(".city-data");
   let country = document.querySelector(".country-data");
-  let emoji = document.querySelector(".current-temperature-emoji");
+  let icon = document.querySelector(".temperature-icon");
   let currentTemp = document.querySelector(".current-temperature-data");
   let currentTempDesc = document.querySelector(
     ".current-temperature-description"
@@ -37,6 +44,11 @@ function cityTemperatureFunction(response) {
 
   city.innerHTML = response.data.city;
   country.innerHTML = response.data.country.toUpperCase();
+   icon.innerHTML = `<img
+      src=${response.data.condition.icon_url}
+      alt="current temperature emoji"
+      class="current-temperature-emoji"
+    />`;
   currentTemp.innerHTML = Math.round(response.data.temperature.current) + "°C";
   currentTempDesc.innerHTML = response.data.condition.description;
   humidity.innerHTML = `${response.data.temperature.humidity}%`;

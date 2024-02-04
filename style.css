@@ -21,7 +21,7 @@ body {
   background-color: #87ceeb;
   padding: 30px;
   border-radius: 40px;
-  width: 80%;
+
 }
 
 .input-search {
@@ -59,7 +59,8 @@ h2 {
 }
 
 .current-temperature-emoji {
-  font-size: 80px;
+  width: 120px;
+  height: 120px;
 }
 .current-temperature-data {
   font-size: 40px;
