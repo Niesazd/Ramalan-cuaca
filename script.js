@@ -11,13 +11,11 @@ function mainDisplay(response) {
 
   city.innerHTML = response.data.city;
   country.innerHTML = response.data.country.toUpperCase();
-  icon.innerHTML = 
-    `<img
+  icon.innerHTML = `<img
       src=${response.data.condition.icon_url}
       alt="current temperature emoji"
       class="current-temperature-emoji"
-    />`
-  ;
+    />`;
   currentTemp.innerHTML = Math.round(response.data.temperature.current) + "°C";
   currentTempDesc.innerHTML = response.data.condition.description;
   humidity.innerHTML = `${response.data.temperature.humidity}%`;
@@ -44,7 +42,7 @@ function cityTemperatureFunction(response) {
 
   city.innerHTML = response.data.city;
   country.innerHTML = response.data.country.toUpperCase();
-   icon.innerHTML = `<img
+  icon.innerHTML = `<img
       src=${response.data.condition.icon_url}
       alt="current temperature emoji"
       class="current-temperature-emoji"
