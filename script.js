@@ -87,7 +87,35 @@ function currentTimeFunction() {
   // console.log(timeString); // 9:41 PM
 }
 
+function displayForecast() {
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="row">
+    <div class="col-2">
+    <div class="weather-forecast-date">${day}</div>
+    <div class="temperature-icon">
+    <img
+    src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
+    alt="temperature icon forecast"
+    />
+    </div>
+    <div class="weather-forecast-temperature">
+    <span class="max-temperature">12° </span>
+    <span class="min-temperature"> 8°</span>
+    </div>
+    </div>
+    </div>`;
+  });
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let searchCity = document.querySelector(".input-search");
 console.log(searchCity);
 searchCity.addEventListener("submit", searchCityFunction);
 currentTimeFunction();
+displayForecast();
