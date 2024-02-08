@@ -21,6 +21,7 @@ body {
   background-color: #87ceeb;
   padding: 30px;
   border-radius: 40px;
+  min-width: 480px;
 }
 
 .input-search {

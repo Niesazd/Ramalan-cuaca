@@ -1,33 +1,10 @@
-function mainDisplay(response) {
-  let city = document.querySelector(".city-data");
-  let country = document.querySelector(".country-data");
-  let icon = document.querySelector(".temperature-icon");
-  let currentTemp = document.querySelector(".current-temperature-data");
-  let currentTempDesc = document.querySelector(
-    ".current-temperature-description"
-  );
-  let humidity = document.querySelector(".humidity-data");
-  let wind = document.querySelector(".wind-data");
+function mainDisplay(city) {
+  let apiKey = "5fe7120d92tc7592472edba320co9e7b";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  console.log(apiUrl);
 
-  city.innerHTML = response.data.city;
-  country.innerHTML = response.data.country.toUpperCase();
-  icon.innerHTML = `<img
-      src=${response.data.condition.icon_url}
-      alt="current temperature emoji"
-      class="current-temperature-emoji"
-    />`;
-  currentTemp.innerHTML = Math.round(response.data.temperature.current) + "°C";
-  currentTempDesc.innerHTML = response.data.condition.description;
-  humidity.innerHTML = `${response.data.temperature.humidity}%`;
-  wind.innerHTML = `${response.data.wind.speed} km/h`;
+  axios.get(apiUrl).then(cityTemperatureFunction);
 }
-
-let city = "Shah-Alam";
-let apiKey = "5fe7120d92tc7592472edba320co9e7b";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-console.log(apiUrl);
-
-axios.get(apiUrl).then(mainDisplay);
 
 function cityTemperatureFunction(response) {
   let city = document.querySelector(".city-data");
@@ -117,5 +94,6 @@ function displayForecast() {
 let searchCity = document.querySelector(".input-search");
 console.log(searchCity);
 searchCity.addEventListener("submit", searchCityFunction);
+mainDisplay("Kuala-Lumpur");
 currentTimeFunction();
 displayForecast();
