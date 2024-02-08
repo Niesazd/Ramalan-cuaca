@@ -20,14 +20,16 @@ function cityTemperatureFunction(response) {
   city.innerHTML = response.data.city;
   country.innerHTML = response.data.country.toUpperCase();
   icon.innerHTML = `<img
-      src=${response.data.condition.icon_url}
-      alt="current temperature emoji"
-      class="current-temperature-emoji"
+    src=${response.data.condition.icon_url}
+    alt="current temperature emoji"
+    class="current-temperature-emoji"
     />`;
   currentTemp.innerHTML = Math.round(response.data.temperature.current) + "°C";
   currentTempDesc.innerHTML = response.data.condition.description;
   humidity.innerHTML = `${response.data.temperature.humidity}%`;
   wind.innerHTML = `${response.data.wind.speed} km/h`;
+
+  getForecast(response.data.city);
 }
 
 function searchCityFunction(response) {
@@ -64,7 +66,14 @@ function currentTimeFunction() {
   // console.log(timeString); // 9:41 PM
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "5fe7120d92tc7592472edba320co9e7b";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
   let forecastHtml = "";
 
@@ -92,7 +101,6 @@ function displayForecast() {
 }
 
 let searchCity = document.querySelector(".input-search");
-console.log(searchCity);
 searchCity.addEventListener("submit", searchCityFunction);
 mainDisplay("Kuala-Lumpur");
 currentTimeFunction();
